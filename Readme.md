@@ -10,9 +10,9 @@ I just began this journey, so **Let's go**
 **link:** https://drive.google.com/file/d/1k-K2RHWPMhSlEPwrGnhedrNO6602ivII/view?usp=sharing
 
 Structure:
-
+```python
 Market_Basket_Analysis/
-├── .vscode/                     # VS Code settings
+├── .vscode/                   # VS Code settings
 │   ├── extensions.json
 │   └── settings.json
 ├── ***files/***                     # Data files
@@ -23,6 +23,8 @@ Market_Basket_Analysis/
 ├── __init__.py                  # Python package marker
 ├── .gitignore                   # Ignored files
 └── Readme.md                    # Project documentation
+
+```
 
 ---
 
