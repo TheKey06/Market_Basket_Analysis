@@ -1,5 +1,5 @@
 {
-  "python.defaultInterpreterPath": "/home/keynerriv/Documentos/Proyectos/MBA/.venv/bin/python",
+  "python.defaultInterpreterPath": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
   "python.terminal.activateEnvironment": true,
   "jupyter.kernels.excludePythonEnvironments": [],
   "notebook.kernelProviderAssociations": []
