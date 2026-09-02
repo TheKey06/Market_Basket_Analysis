@@ -1,0 +1,38 @@
+{
+  "name": "Executive Precision",
+  "dataColors": [
+    "#d32f2f",
+    "#1a1c1e",
+    "#44474a",
+    "#74777a",
+    "#aeb2b5",
+    "#d6dade",
+    "#f0f4f8",
+    "#ffffff"
+  ],
+  "background": "#f6fafe",
+  "foreground": "#1a1c1e",
+  "tableAccent": "#d32f2f",
+  "visualStyles": {
+    "*": {
+      "*": {
+        "*": [
+          {
+            "fontSize": 11,
+            "fontFamily": "Inter",
+            "color": {
+              "solid": {
+                "color": "#1a1c1e"
+              }
+            }
+          }
+        ],
+        "general": [
+          {
+            "responsive": true
+          }
+        ]
+      }
+    }
+  }
+}
