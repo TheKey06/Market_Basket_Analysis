@@ -8,7 +8,7 @@ base_dir = Path.cwd()
 
 df = pd.read_csv(f'{base_dir}/files/diario_ventas_new.csv', sep=',',low_memory=False)
 
-df['cliente'] = df['cliente'].astype(str)
+df[['cliente','troevendedor']] =df[['cliente','troevendedor']].astype(str)
 df['ruta'] = df['ruta'].astype('Int64').astype(str)
 variables_categoricas = ['centrocostos','unidadnegocios']
 df[['cantidad','cantxunmedida']] = df[['cantidad','cantxunmedida']].astype('Int64')
@@ -51,24 +51,25 @@ df.loc[df['porcentajedescuento'].isnull(), 'porcentajedescuento'] = 0
 df.loc[df['ruta'].isnull(), 'ruta'] = 'NA'
 df.loc[df['zona'].isnull(), 'zona'] = 'NA'
 df.loc[df['ciclo'].isnull(), 'ciclo'] = 'NA'
+df.loc[df['troevendedor'].isnull(), 'troevendedor'] = '9999'
 
 # Filling the information with the dictionaries we did before
 df['grouptat'] = df['grouptat'].fillna(
     df['referencia'].map(group_dict)
 )
 # These part of here are exceptions because there were not found in the dictionary
-df.loc[df['grouptat'].isnull(),'grouptat'] = 'NA'
+df.loc[df['grouptat'].isnull(),'grouptat'] = 'otros'
 
 
 df['tro_e_marca'] = df['tro_e_marca'].fillna(
     df['referencia'].map(marca_dict)
 )
-df.loc[df['tro_e_marca'].isnull(),'tro_e_marca'] = 'NA'
+df.loc[df['tro_e_marca'].isnull(),'tro_e_marca'] = 'OTROS'
 
 df['lineatat'] = df['lineatat'].fillna(
     df['referencia'].map(linea_dict)
 )
-df.loc[df['lineatat'].isnull(),'lineatat'] = 'NA'
+df.loc[df['lineatat'].isnull(),'lineatat'] = 'OTROS'
 
 df['nombrereferencia'] = df['nombrereferencia'].fillna(
     df['referencia'].map(nombrereferencia_dict)
