@@ -50,7 +50,7 @@ df.loc[df['porcentajemargen'].isnull(), 'porcentajemargen'] = 0
 df.loc[df['porcentajedescuento'].isnull(), 'porcentajedescuento'] = 0
 df.loc[df['ruta'].isnull(), 'ruta'] = 'NA'
 df.loc[df['zona'].isnull(), 'zona'] = 'NA'
-df.loc[df['ciclo'].isnull(), 'ciclo'] = 'NA'
+df.loc[df['ciclo'].isnull(), 'ciclo'] = 'Online'
 df.loc[df['troevendedor'].isnull(), 'troevendedor'] = '9999'
 
 # Filling the information with the dictionaries we did before
@@ -69,7 +69,7 @@ df.loc[df['tro_e_marca'].isnull(),'tro_e_marca'] = 'OTROS'
 df['lineatat'] = df['lineatat'].fillna(
     df['referencia'].map(linea_dict)
 )
-df.loc[df['lineatat'].isnull(),'lineatat'] = 'OTROS'
+df.loc[(df['lineatat'].isnull())|(df['lineatat']== 'NA'),'lineatat'] = 'OTROS'
 
 df['nombrereferencia'] = df['nombrereferencia'].fillna(
     df['referencia'].map(nombrereferencia_dict)
