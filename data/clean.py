@@ -47,11 +47,22 @@ nombrereferencia_dict = (
 # and those caterogical values we replace with NA is because in those sales the 'zona', 'ciclo' and 'ruta' does not apply
 # due to those are online sales or belongs to a different area
 df.loc[df['porcentajemargen'].isnull(), 'porcentajemargen'] = 0
+
 df.loc[df['porcentajedescuento'].isnull(), 'porcentajedescuento'] = 0
-df.loc[df['ruta'].isnull(), 'ruta'] = 'NA'
-df.loc[df['zona'].isnull(), 'zona'] = 'NA'
+
+df.loc[(df['ruta'].isnull(), 'ruta')] = '9999'
+
+df.loc[(df['ruta']== 'NA'),'ruta'] = '9999'
+
+df.loc[(df['zona'].isnull()), 'zona'] = '999'
+
+df.loc[(df['zona']== 'NaN'), 'zona'] = '999'
+
 df.loc[df['ciclo'].isnull(), 'ciclo'] = 'Online'
+
 df.loc[df['troevendedor'].isnull(), 'troevendedor'] = '9999'
+
+df.loc[df['troevendedor']== 'NA', 'troevendedor'] = '9999'
 
 # Filling the information with the dictionaries we did before
 df['grouptat'] = df['grouptat'].fillna(
