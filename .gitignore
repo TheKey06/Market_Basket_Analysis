@@ -2,7 +2,8 @@
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
-files/*.parquet
+files/*.csv
 *.csv
 skills/*
 Documentation.md
+*.pbix
