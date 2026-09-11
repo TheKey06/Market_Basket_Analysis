@@ -7,3 +7,4 @@ files/*.csv
 skills/*
 Documentation.md
 *.pbix
+*.pkl
