@@ -5,7 +5,7 @@ Segmentscustomer by purchase pattern taking into account RFM (Recency, Frequency
 
 ## Project Structure:
 
-```Md
+```md
 Market_Basket_Analysis/
 ├── .vscode/                   # VS Code settings
 │   ├── extensions.json
@@ -49,5 +49,5 @@ pip install -r requirements.txt
 
 --- 
 ## Visualization
-(Click here to see the Power BI)[https://app.powerbi.com/view?r=eyJrIjoiNmY4MjczMDctMWQ4ZC00YzZlLWExYTQtYjRiZmNkZDQyMDdlIiwidCI6IjM4NTVmZDBlLTJlOWEtNGZjYy05NTUyLTg3OGEwZmU0YTA1ZCIsImMiOjR9]
+[Click here to see the Power BI visualization](https://app.powerbi.com/view?r=eyJrIjoiNmY4MjczMDctMWQ4ZC00YzZlLWExYTQtYjRiZmNkZDQyMDdlIiwidCI6IjM4NTVmZDBlLTJlOWEtNGZjYy05NTUyLTg3OGEwZmU0YTA1ZCIsImMiOjR9)
 
